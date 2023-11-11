@@ -1,0 +1,11 @@
+.DS_Store
+.swp
+.log
+node_modules
+cstore
+cdata
+carts
+bbs
+backup
+log.txt
+sdi_controllers.txt

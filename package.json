@@ -1,0 +1,16 @@
+{
+  "name": "piconet",
+  "version": "0.1.0",
+  "description": "A p2p pico-8 chatroom.",
+  "main": "piconet.js",
+  "scripts": {
+    "export": "$PICO8_PATH piconet.p8 -export piconet.js",
+    "link:cart": "ln -s \"$(pwd)\" $HOME/Library/Application\\ Support/pico-8/carts"
+  },
+  "keywords": [
+    "pico-8",
+    "pico8"
+  ],
+  "author": "Noman",
+  "license": "MIT"
+}
