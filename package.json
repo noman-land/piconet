@@ -14,6 +14,7 @@
     "prettier": "prettier --check ./src",
     "prettier:write": "prettier --write ./src",
     "export": "$PICO8_PATH src/piconet.p8 -export public/piconet.js",
+    "deploy": "npm run export && npm run build",
     "link:cart": "ln -s \"$(pwd)/src\" $HOME/Library/Application\\ Support/pico-8/carts/piconet"
   },
   "keywords": [
