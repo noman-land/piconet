@@ -26,5 +26,5 @@
       }
     ]
   },
-  "ignorePatterns": ["src/*.js"]
+  "ignorePatterns": ["**/*.js", "dist"]
 }
