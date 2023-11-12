@@ -20,9 +20,9 @@ load piconet/piconet.p8
 
 1. Make sure to set a shell variable for `$PICO8_PATH`. On a Mac, something similar to the following can be added to your `.bashrc` or `.zshrc` or whatever shell you use.
 
-    ```bash
-    export PICO8_PATH="/Applications/pico-8/PICO-8.app/Contents/MacOS/pico8"
-    ```
+   ```bash
+   export PICO8_PATH="/Applications/pico-8/PICO-8.app/Contents/MacOS/pico8"
+   ```
 
 1. Run `npm run export`.
 
