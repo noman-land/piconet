@@ -2,6 +2,8 @@
 
 A p2p pico-8 chatroom.
 
+![piconet demo gif](piconet-demo.gif)
+
 ## Development
 
 ### In the browser
