@@ -38,5 +38,8 @@
       "npm run lint",
       "npm run prettier:write"
     ]
+  },
+  "dependencies": {
+    "@socketsupply/socket": "^0.4.0"
   }
 }
