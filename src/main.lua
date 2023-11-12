@@ -1,3 +1,12 @@
+pins={
+	frame=0x5f80,
+	reloads=0x5f81,
+	-- xx=0x5f82,
+	-- ...
+	-- xx=0x5ffe,
+	reload=0x5fff,
+}
+
 function butn(t,n)
 	return band(t,n)==n
 end
@@ -15,13 +24,12 @@ end
 
 function _update60()
 	frame=(frame+1)%60
-	poke(0x5f80, frame)
+	poke(pins.frame,frame)
 	listen_for_reset()
 end
 
 function listen_for_reset()
-	-- Listen to the final array slot
-	if (peek(0x5fff) == 1) then
+	if (peek(pins.reload)==1) then
 		run()
 		resets+=1
 	end
@@ -30,5 +38,5 @@ end
 function _draw()
 	cls(bg_color)
 	print("frame: "..frame)
-	print("reloads: "..peek(0x5f81))
+	print("reloads: "..peek(pins.reloads))
 end
