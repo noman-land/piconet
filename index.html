@@ -1003,11 +1003,18 @@
     </script>
 
     <style type="text/css">
+      html, body {
+        font-size: 16px;
+      }
       * {
         font-family: sans-serif;
       }
-      h1 {
+      h1, h2 {
         text-align: center;
+      }
+      button {
+        font-size: 1rem;
+        padding: 8px 12px;
       }
 
       .p8_menu_button {
@@ -1071,6 +1078,8 @@
 
   <body style="padding: 0px; margin: 0px; background-color: #000; color: #ccc">
     <h1>piconet</h1>
+    <h2>frame: <span id="frame">0</span></h2>
+    <h2><button id="reload">reload</button></h2>
     <div id="body_0">
       <!-- hide this when playing in mobile (p8_touch_detected) so that elements don't affect layout -->
 

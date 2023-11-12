@@ -5,6 +5,7 @@
   "main": "src/main.ts",
   "type": "module",
   "scripts": {
+    "prepare": "husky install",
     "dev": "npm run dev:web & npm run dev:native",
     "dev:web": "vite",
     "dev:native": "/Applications/pico-8/PICO-8.app/Contents/MacOS/pico8 -run src/piconet.p8",
@@ -26,13 +27,14 @@
     "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
+    "husky": "^8.0.3",
     "prettier": "^3.0.3",
     "vite": "^4.5.0",
     "vite-tsconfig-paths": "^4.2.1"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "npm run lint:fix",
+      "npm run lint",
       "npm run prettier:write"
     ]
   }
