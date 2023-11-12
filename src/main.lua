@@ -10,6 +10,7 @@ end
 
 function _init()
 	frame=0
+	bg_color=flr(rnd()*16)
 end
 
 function _update60()
@@ -27,7 +28,7 @@ function listen_for_reset()
 end
 
 function _draw()
-	cls(0)
+	cls(bg_color)
 	print("frame: "..frame)
 	print("reloads: "..peek(0x5f81))
 end
