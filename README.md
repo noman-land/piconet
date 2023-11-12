@@ -4,6 +4,12 @@ A p2p pico-8 chatroom.
 
 ## Development
 
+### In the browser
+
+1. Run `npm i && npm run dev`
+
+### In a native pico-8
+
 Keep the project folder where you keep all your coding projects, then symlink it to the pico-8 carts folder. On a Mac this would be something similar to:
 
 ```bash
