@@ -2,23 +2,23 @@ const PIN = {
   frame: 0,
   reloads: 1,
   reload: 127,
-}
+};
 
-const reloadButton = document.getElementById('reload')!
-const frameText = document.getElementById('frame')!
-const reloadsText = document.getElementById('reloads')!
+const reloadButton = document.getElementById('reload')!;
+const frameText = document.getElementById('frame')!;
+const reloadsText = document.getElementById('reloads')!;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const pins = ((self as any).pico8_gpio = new Proxy(new Array(128), {
   set(target, p: string, value) {
-    const pin = parseInt(p, 10)
+    const pin = parseInt(p, 10);
     target[pin] = value;
-    switch (pin) { 
+    switch (pin) {
       case PIN.frame: {
         frameText.innerText = value;
         if (target[PIN.frame] > 0 && reloadButton.getAttribute('disabled')) {
           reloadButton.removeAttribute('disabled');
-         }
+        }
         break;
       }
       case PIN.reloads: {
