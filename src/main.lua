@@ -12,8 +12,8 @@ function _init()
 	frame=0
 end
 
-function _update()
-	frame=(frame+1)
+function _update60()
+	frame=(frame+1)%60
 	poke(0x5f80, frame)
 	listen_for_reset()
 end
