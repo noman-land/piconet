@@ -2,15 +2,17 @@
   "name": "piconet",
   "version": "0.1.0",
   "description": "A p2p pico-8 chatroom.",
-  "main": "piconet.js",
+  "main": "src/main.ts",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "npm run dev:web & npm run dev:native",
+    "dev:web": "vite",
+    "dev:native": "/Applications/pico-8/PICO-8.app/Contents/MacOS/pico8 -run src/piconet.p8",
     "lint": "eslint --ext ts,tsx --report-unused-disable-directives --max-warnings 0 .",
-    "prettier": "npx prettier --check .",
-    "prettier:write": "npx prettier --write .",
-    "export": "$PICO8_PATH piconet.p8 -export piconet.js",
-    "link:cart": "ln -s \"$(pwd)\" $HOME/Library/Application\\ Support/pico-8/carts"
+    "prettier": "prettier --check ./src",
+    "prettier:write": "prettier --write ./src",
+    "export": "$PICO8_PATH src/piconet.p8 -export src/piconet.js",
+    "link:cart": "ln -s \"$(pwd)/src\" $HOME/Library/Application\\ Support/pico-8/carts/piconet"
   },
   "keywords": [
     "pico-8",
