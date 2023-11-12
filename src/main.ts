@@ -8,7 +8,11 @@ const pins = ((self as any).pico8_gpio = new Proxy(new Array(120), {
   },
 }));
 
+let reloads = (pins[1] = 0);
+
 const reload = () => {
+  pins[1] = ++reloads;
+  document.getElementById('reloads')!.innerText = reloads.toString();
   pins[127] = 1;
   setTimeout(() => {
     pins[127] = 0;

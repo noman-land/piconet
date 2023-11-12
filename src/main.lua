@@ -22,12 +22,12 @@ function listen_for_reset()
 	-- Listen to the final array slot
 	if (peek(0x5fff) == 1) then
 		run()
-		print('why')
+		resets+=1
 	end
 end
 
 function _draw()
 	cls(0)
-	print(frame)
-	print(peek(0x5fff))
+	print("frame: "..frame)
+	print("reloads: "..peek(0x5f81))
 end
