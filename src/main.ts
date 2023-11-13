@@ -4,10 +4,6 @@ const PIN = {
   reload: 127,
 };
 
-const reloadButton = document.getElementById('reload')!;
-const frameText = document.getElementById('frame')!;
-const reloadsText = document.getElementById('reloads')!;
-
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const pins = ((self as any).pico8_gpio = new Proxy(new Array(128), {
   set(target, p: string, value) {
@@ -34,9 +30,12 @@ const reload = () => {
   pins[PIN.reload] = 1;
   setTimeout(() => {
     pins[PIN.reload] = 0;
-  }, 50);
+  }, 20);
 };
 
-document.getElementById('reload')!.addEventListener('click', reload);
+const reloadButton = document.getElementById('reload')!;
+const frameText = document.getElementById('frame')!;
+const reloadsText = document.getElementById('reloads')!;
+reloadButton.addEventListener('click', reload);
 
 // setInterval(rerun, 5000);
