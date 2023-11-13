@@ -18,7 +18,7 @@ const pins = ((self as any).pico8_gpio = new Proxy(new Array(128), {
         break;
       }
       case PIN.reloads: {
-        reloadsText.innerText = value.toString();
+        reloadsText.innerText = value;
         break;
       }
     }
