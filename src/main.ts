@@ -36,6 +36,5 @@ const reload = () => {
 const reloadButton = document.getElementById('reload')!;
 const frameText = document.getElementById('frame')!;
 const reloadsText = document.getElementById('reloads')!;
-reloadButton.addEventListener('click', reload);
 
-// setInterval(rerun, 5000);
+reloadButton.addEventListener('click', reload);
